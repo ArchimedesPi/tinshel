@@ -1,4 +1,48 @@
 [root]
 name = "tinshel"
 version = "0.0.1"
+dependencies = [
+ "linenoise-rust 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
+ "toml 0.1.15 (git+https://github.com/alexcrichton/toml-rs)",
+]
+
+[[package]]
+name = "gcc"
+version = "0.1.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "linenoise-rust"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "gcc 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "log"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "regex 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "regex"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "rustc-serialize"
+version = "0.2.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "toml"
+version = "0.1.15"
+source = "git+https://github.com/alexcrichton/toml-rs#909a85069b866ab7384eda20a3ff7d751d8c2235"
+dependencies = [
+ "rustc-serialize 0.2.9 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
