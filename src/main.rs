@@ -1,19 +1,13 @@
-#[macro_use] extern crate log;
 extern crate toml;
-use std::io::{File};
+#[macro_use]
+extern crate log;
+extern crate env_logger;
+
+mod shell;
+mod config;
 
 fn main() {
+	env_logger::init().unwrap();
+
 	info!("tinshel starting");
-	debug!("now load config");
-	let configpath = Path::new("/home/liam/.tinshel.toml");
-
-
-	let configcontents = match File::open(&configpath).read_to_string() {
-        Ok(s) => s,
-        Err(e) => panic!("error reading file: {}", e),
-    };
-
-    //println!("{}", configcontents);
-	let config = toml::Parser::new(configcontents.as_slice()).parse().unwrap();
-	debug!("{:?}", config);
 }
