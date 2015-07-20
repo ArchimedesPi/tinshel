@@ -4,9 +4,11 @@ name = "tinshel"
 version = "0.0.1"
 authors = ["Liam Marshall <archimedespi3141@gmail.com>"]
 
-[dependencies]
-linenoise-rust = "0.1.2"
-log = "0.1.10"
+[[bin]]
+name = "tinshel"
 
-[dependencies.toml]
-git = "https://github.com/alexcrichton/toml-rs"
+
+[dependencies]
+toml = "0.1.21"
+log = "0.3.1"
+env_logger = "0.3.1"
